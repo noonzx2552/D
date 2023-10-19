@@ -9,7 +9,7 @@ def chan(num):
         num % 100
     if num >= 10:
         data += tens[num//10]
-    else:
+    if num >= 1:
         data += ones[ones//1]
     return (data)
 cc = chan(num)
