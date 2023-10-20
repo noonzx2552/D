@@ -1,18 +1,20 @@
 import random
 data = []
 num = []
+low = 0
+high = 0
 for i in range(10):
     r = random.randrange(0,100)
     data.append(r)
     num.append(r)
-for j in range(100):
-    for k in range(0,10):
-        if num[k-1] < num[k]:
-            num.insert(k+2,num[k])
-            del num[k]
-        else:
-            num = num
+low = data[0]
+high = data[0]
 
-for z in range(0,10):
-    a = data[z]
-    print(a)
+for num in data:
+    if num < low:
+            low = num 
+    if num > high:
+            high = num
+print(f"low:{low}")
+print(f"high:{high}")
+print(f"data:{data}")
