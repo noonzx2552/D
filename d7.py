@@ -7,9 +7,12 @@ for i in range(10):
     num.append(r)
 for j in range(100):
     for k in range(0,10):
-        ifelse = k+1
-        if num[k] > num[ifelse]:
+        if num[k-1] < num[k]:
             num.insert(k+2,num[k])
             del num[k]
         else:
             num = num
+
+for z in range(0,10):
+    a = data[z]
+    print(a)
