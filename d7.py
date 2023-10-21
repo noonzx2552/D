@@ -7,9 +7,9 @@ for i in range(10):
     r = random.randrange(0,100)
     data.append(r)
     num.append(r)
+
 low = data[0]
 high = data[0]
-
 for num in data:
     if num < low:
             low = num 
