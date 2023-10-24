@@ -1,14 +1,9 @@
+#A = 65
 words = input("word : ")
-data = []
-a = len(words)
+words=words.upper()
+data = [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]
 for i in words:
-    data.append(i)
-count = []
-for i in data:
-    if data[i] == count:
-        count[i] += 1
-    else:
-        count[i] = 1
-
-for i in count:
-    print(i)
+    c = ord(i)
+    q = c-65
+    data[q] += 1
+    print(data)

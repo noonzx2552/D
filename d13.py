@@ -1,10 +1,11 @@
 table = []
-average = ["student_id",0,0,0]
 averagemath = 0
 averagesci = 0
 averageeng = 0
 with open("student_scores.csv", "r") as f:
+    # Discard header.
     row = f.readline()
+
     # Read and process each rows.
     while row != "":
         row = f.readline()
@@ -12,9 +13,16 @@ with open("student_scores.csv", "r") as f:
         columns = row.split(",") # Split line -> array of words.
         table.append(columns)
 
-for i in range(4):
-    for j in range(10):
-        averagemath += table[i][j]
-for i in table:
-    print(i)
-print(average)
+for i in range(10):
+    averagemath += int(table[i][1])
+    averagesci += int(table[i][2])
+    averageeng += int(table[i][3])
+
+averagemath = averagemath/10
+averagesci = averagesci/10
+averageeng = averageeng/10
+
+for i in range(10):
+    if table[i][1] < averagemath:
+    if table[i][2] < averagesci:
+    if table[i][3] < averageeng:
